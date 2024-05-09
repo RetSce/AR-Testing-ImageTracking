@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: Image Checking
+  m_EditorClassIdentifier: 
+  m_GuidLow: 5135981809607610925
+  m_GuidHigh: 5207492545834577313
+  m_DataStore:
+    m_Storage: []
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 4613567738964565044
+      m_GuidHigh: 10282404748912038022
+    m_SerializedTextureGuid:
+      m_GuidLow: 14881192979237261428
+      m_GuidHigh: 6807051359196420347
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: reddiamond-k
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5147677122458582656
+      m_GuidHigh: 425969930186588571
+    m_SerializedTextureGuid:
+      m_GuidLow: 13530102200856682193
+      m_GuidHigh: 10016946057423037754
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: uno-reverseyellow
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4677676975073967070
+      m_GuidHigh: 13695421515624417699
+    m_SerializedTextureGuid:
+      m_GuidLow: 838819592770636298
+      m_GuidHigh: 14908239121786424458
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Adidas
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5761408565680098107
+      m_GuidHigh: 5226342478104613283
+    m_SerializedTextureGuid:
+      m_GuidLow: 13448897939786000060
+      m_GuidHigh: 830437300381795178
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Adidas
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5635966901706756847
+      m_GuidHigh: 13843602454357013169
+    m_SerializedTextureGuid:
+      m_GuidLow: 3275370735102262543
+      m_GuidHigh: 17468218602757485560
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Adidas
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4973060377629375358
+      m_GuidHigh: 8771705988608337024
+    m_SerializedTextureGuid:
+      m_GuidLow: 14723558173234652103
+      m_GuidHigh: 12043385320418059658
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Adidas
+    m_Texture: {fileID: 0}
