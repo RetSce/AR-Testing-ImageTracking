@@ -1,4 +1,4 @@
-Unity Version  : 2022.3.3f1
+Unity Version  : 2022.3.9f1
 
 Game:
 - AR puzzle game  : Riddle, Question Solving
@@ -13,5 +13,4 @@ Buttons:
 - Bottom Right  : Button with nothing -> open the inputfield for player to type in their answer for the question display on image or picture.
 
 Problem Occur:
-- Unable to open the apk as the build contain error, the problem seems to be unable to be fix as there are many users having the same problem and Unity Tech has filed the issue.
-- The package or plugin is still not updated till the time (5/10/2024).
+- Unable to scan using phone, not sure what is the cause of the problem.
