@@ -40,7 +40,7 @@ public class PlaceTrackedImages : MonoBehaviour
     {
 
         // Loop through all new tracked images that have been detected
-        foreach (var trackedImage in eventArgs.updated)
+        foreach (var trackedImage in eventArgs.added)
         {
             // Get the ame of the referance image
             var imageName = trackedImage.referenceImage.name;
@@ -79,4 +79,22 @@ public class PlaceTrackedImages : MonoBehaviour
             //_instantiatedPrefabs[trackedImage.referenceImage.name].SetActive(false);
         }
     }
+
+    public void btn()
+    {
+        ListAllImages();
+    }
+
+    void ListAllImages()
+    {
+        Debug.Log(
+            $"There are {_trackedImagesManager.trackables.count} images being tracked.");
+
+        foreach (var trackedImage in _trackedImagesManager.trackables)
+        {
+            Debug.Log($"Image: {trackedImage.referenceImage.name} is at " +
+                      $"{trackedImage.transform.position}");
+        }
+    }
+
 }

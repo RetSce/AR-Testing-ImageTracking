@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.AR;
+using UnityEngine.XR.ARFoundation;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
@@ -16,6 +18,11 @@ public class GameManager : MonoBehaviour
     public string[] AnswerQ3;
     public string[] Answer;
     public bool AnswerGet;
+
+
+    [Header("Prefab to display")]
+    public GameObject[] ImageList;
+    public ARTrackedImageManager ARImageManager;
 
 
     [Header("Level Variable")]
@@ -41,7 +48,7 @@ public class GameManager : MonoBehaviour
     public string[] hintlvl1txt;
     public string[] hintlvl2txt;
     public string[] hintlvl3txt;
-    private string[] hinttxtarray;
+    public string[] hinttxtarray;
 
 
     // Mobile Keyboard 
@@ -57,18 +64,19 @@ public class GameManager : MonoBehaviour
     {
         AnswerGet = false;
 
+        ARImageManager = GameObject.Find("XR Origin (XR Rig)").GetComponent<ARTrackedImageManager>();
 
         // Getting the vlue of curlevel
         CurLevel = SceneManager.GetActiveScene().buildIndex;
 
 
         hinttxtarray = new string[3];
+
     }
 
 
     private void Update()
     {
-        HintTextChecking = true;
 
         LevelChecker();
         UpdateAnswer();
@@ -84,10 +92,11 @@ public class GameManager : MonoBehaviour
     // Update Answer and Hint
     public void UpdateAnswer()
     {
-        if (CurLevel == 1)
+        if (CurLevel == 1 && HintTextChecking == true)
         {
             Answer = new string[AnswerQ1.Length];
             hinttxtarray = new string[hintlvl1txt.Length];
+            ARImageManager.trackedImagePrefab = ImageList[0];
 
             for (int i = 0; i < AnswerQ1.Length; i++)
             {
@@ -98,12 +107,16 @@ public class GameManager : MonoBehaviour
             {
                 hinttxtarray[i] = hintlvl1txt[i];
             }
+
+            ChangeHint();
+            HintTextChecking = false;
         }
 
-        if (CurLevel == 2)
+        if (CurLevel == 2 && HintTextChecking == true)
         {
             Answer = new string[AnswerQ2.Length];
             hinttxtarray = new string[hintlvl2txt.Length];
+            ARImageManager.trackedImagePrefab = ImageList[1];
 
             for (int i = 0; i < AnswerQ2.Length; i++)
             {
@@ -114,12 +127,16 @@ public class GameManager : MonoBehaviour
             {
                 hinttxtarray[i] = hintlvl2txt[i];
             }
+
+            ChangeHint();
+            HintTextChecking = false;
         }
 
-        if (CurLevel == 3)
+        if (CurLevel == 3 && HintTextChecking == true)
         {
             Answer = new string[AnswerQ3.Length];
             hinttxtarray = new string[hintlvl3txt.Length];
+            ARImageManager.trackedImagePrefab = ImageList[2];
 
             for (int i = 0; i < AnswerQ3.Length; i++)
             {
@@ -130,9 +147,10 @@ public class GameManager : MonoBehaviour
             {
                 hinttxtarray[i] = hintlvl3txt[i];
             }
-        }
 
-        ChangeHint();
+            ChangeHint();
+            HintTextChecking = false;
+        }
     }
 
 
@@ -141,6 +159,8 @@ public class GameManager : MonoBehaviour
     {
         //GameObject.Find("Tutorial").SetActive(true);
         CurLevel = 1;
+
+        HintTextChecking = true;
     }
 
     // Open the input field
@@ -158,16 +178,22 @@ public class GameManager : MonoBehaviour
             if (AnswerTxt == Answer[i])
             {
                 AnswerGet = true;
-                CorrectAnswer();
                 CurLevel++;
+                Debug.Log(AnswerGet);
                 break;
+
+                
             }
-            Debug.Log(TextInput.text == Answer[i]);
         }
 
         if (AnswerGet == false)
         {
             ErrorAnswer();
+        }
+
+        else if (AnswerGet == true)
+        {
+            CorrectAnswer();
         }
     }
 
@@ -182,7 +208,6 @@ public class GameManager : MonoBehaviour
         hinttxt.text = "";
         AnswerGet = false;
         HintTextChecking = true;
-
     }
 
     // if wrong answer
@@ -224,18 +249,13 @@ public class GameManager : MonoBehaviour
     // Changing Hint
     public void ChangeHint()
     {
-        for (int i = 0; i <= hinttxtarray.Length; i++)
+        hinttxt.text = "";
+        
+        for (int i = 0; i < hinttxtarray.Length; i++)
         {
-            if (i == hinttxtarray.Length && HintTextChecking == true)
-            {
-                HintTextChecking = false;
-                break;
-            }
-
-            else if (HintTextChecking == true)
-            {
+            
                 hinttxt.text += hinttxtarray[i] + "\n";
-            }
+            
         }
     }
 }

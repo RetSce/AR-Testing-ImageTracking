@@ -21,12 +21,12 @@ MonoBehaviour:
       m_GuidLow: 4613567738964565044
       m_GuidHigh: 10282404748912038022
     m_SerializedTextureGuid:
-      m_GuidLow: 14881192979237261428
-      m_GuidHigh: 6807051359196420347
+      m_GuidLow: 8557990562273113592
+      m_GuidHigh: 1758502170402439080
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
     m_Name: reddiamond-k
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: ff6f35f8171276c4a83f973368746718, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 5147677122458582656
       m_GuidHigh: 425969930186588571
@@ -36,7 +36,7 @@ MonoBehaviour:
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
     m_Name: uno-reverseyellow
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: 20cb1ed19444bbc43a25f3fe5d57038b, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 4677676975073967070
       m_GuidHigh: 13695421515624417699
@@ -46,7 +46,7 @@ MonoBehaviour:
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
     m_Name: Adidas
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: b1bb4a0a15f90ba48a4ca9787eb4e4ce, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 5761408565680098107
       m_GuidHigh: 5226342478104613283
@@ -56,7 +56,7 @@ MonoBehaviour:
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
     m_Name: Adidas
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: c16d66bc156bbaa46ac37d29534e860b, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 5635966901706756847
       m_GuidHigh: 13843602454357013169
@@ -66,7 +66,7 @@ MonoBehaviour:
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
     m_Name: Adidas
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: 757afd0f74542d74f8f33ac444946bf2, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 4973060377629375358
       m_GuidHigh: 8771705988608337024
@@ -76,4 +76,4 @@ MonoBehaviour:
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
     m_Name: Adidas
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: 597363c79626cc548a25acec23b322a7, type: 3}
